@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+  <!-- The "P" stroke - dark slate (matches --ink) -->
+  <path d="M5 21V5c0-1 .8-2 2-2h6a6 6 0 0 1 0 12H9"
+        stroke="#1E293B"
+        stroke-width="2.4"
+        stroke-linecap="round"
+        stroke-linejoin="round" />
+  <!-- The blue accent dot (matches --coral, the new brand blue) -->
+  <circle cx="17" cy="6" r="2" fill="#3B82F6" />
+</svg>
