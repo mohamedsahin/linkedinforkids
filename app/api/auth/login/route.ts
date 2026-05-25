@@ -15,7 +15,13 @@ export async function POST(request: Request) {
     const body = await request.json();
     const data = loginSchema.parse(body);
 
-    const user = await prisma.user.findUnique({ where: { email: data.email } });
+    // Single round-trip: fetch the user *and* the child-link (if any) at once.
+    // For PARENT/ADMIN accounts the included relation just returns [] cheaply;
+    // for CHILD accounts it spares us a second sequential query.
+    const user = await prisma.user.findUnique({
+      where: { email: data.email },
+      include: { childLinks: { take: 1, select: { accessApproved: true } } },
+    });
     if (!user) {
       return NextResponse.json({ error: "Invalid credentials." }, { status: 401 });
     }
@@ -43,7 +49,7 @@ export async function POST(request: Request) {
       );
     }
 
-    if ((user as { isSuspended?: boolean }).isSuspended) {
+    if (user.isSuspended) {
       return NextResponse.json(
         { error: "This account has been suspended. Please contact support." },
         { status: 403 },
@@ -51,15 +57,10 @@ export async function POST(request: Request) {
     }
 
     if (user.role === UserRole.CHILD) {
-      const link = await prisma.parentChild.findFirst({
-        where: { childId: user.id },
-      });
-
+      const link = user.childLinks[0];
       if (!link || !link.accessApproved) {
         return NextResponse.json(
-          {
-            error: "Your parent has paused your access. Ask them to switch it back on.",
-          },
+          { error: "Your parent has paused your access. Ask them to switch it back on." },
           { status: 403 },
         );
       }
