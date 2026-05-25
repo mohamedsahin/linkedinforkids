@@ -4,7 +4,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
-import { Icon, IconName } from "@/app/components/icon";
+import { Icon, IconName } from "@/app/components/icons";
 import {
   Button, Card, Chip, Badge, Empty, ImgPlaceholder, ProgressLine,
   CATEGORIES, categoryMeta,

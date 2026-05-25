@@ -2,7 +2,7 @@
 
 import { ReactNode } from "react";
 import Link from "next/link";
-import { Icon } from "./icon";
+import { Icon } from "./icons";
 import { Logo } from "./ui";
 
 export function AuthShell({ side, children }: { side: ReactNode; children: ReactNode }) {

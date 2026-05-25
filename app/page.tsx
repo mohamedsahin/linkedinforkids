@@ -1,8 +1,8 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import { redirect } from "next/navigation";
 import { getCurrentSessionUser } from "@/lib/auth";
 import { BRAND } from "@/lib/brand";
-import { Icon, IconName } from "@/app/components/icon";
+import { Icon, IconName } from "@/app/components/icons";
 import { Button, Logo, Chip, Badge, ProgressLine, ImgPlaceholder, Count } from "@/app/components/ui";
 import { ProfileAvatar } from "@/app/components/profile-avatar";
 

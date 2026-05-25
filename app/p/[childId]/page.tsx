@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { prisma } from "@/lib/prisma";
 import { UserRole } from "@prisma/client";
 import { computeGameState } from "@/lib/gamification";
-import { Icon } from "@/app/components/icon";
+import { Icon } from "@/app/components/icons";
 import { Logo, Chip, ImgPlaceholder, ProgressLine } from "@/app/components/ui";
 import { categoryMeta } from "@/lib/categories";
 import { ProfileAvatar } from "@/app/components/profile-avatar";

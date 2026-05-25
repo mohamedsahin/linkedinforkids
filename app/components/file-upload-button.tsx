@@ -1,7 +1,7 @@
 "use client";
 
 import { ChangeEvent, useRef, useState } from "react";
-import { Icon, IconName } from "./icon";
+import { Icon, IconName } from "./icons";
 
 type Props = {
   kind: "photo" | "proof";

@@ -4,7 +4,7 @@
 
 import { ReactNode, useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { Icon, IconName } from "@/app/components/icon";
+import { Icon, IconName } from "@/app/components/icons";
 import { Button, Logo } from "@/app/components/ui";
 import { ProfileAvatar } from "@/app/components/profile-avatar";
 

@@ -3,7 +3,7 @@
 /* Modals: AddChild, EditProfile, NewAchievement, EditAchievement, Reflection */
 
 import { FormEvent, useEffect, useState } from "react";
-import { Icon } from "@/app/components/icon";
+import { Icon } from "@/app/components/icons";
 import { Button, Input, Textarea, Modal, Chip, CATEGORIES, categoryMeta } from "@/app/components/ui";
 import { FileUploadButton } from "@/app/components/file-upload-button";
 import { Achievement, ChildProfileData } from "./shared";

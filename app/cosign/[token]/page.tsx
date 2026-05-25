@@ -2,7 +2,7 @@
 
 import { FormEvent, use, useEffect, useState } from "react";
 import Link from "next/link";
-import { Icon } from "@/app/components/icon";
+import { Icon } from "@/app/components/icons";
 import { Button, Card, Chip, Input, Logo, Textarea, categoryMeta } from "@/app/components/ui";
 
 type LookupResponse = {

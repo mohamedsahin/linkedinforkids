@@ -4,7 +4,7 @@ import { FormEvent, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { forgotPasswordSchema } from "@/lib/validation";
-import { Icon } from "@/app/components/icon";
+import { Icon } from "@/app/components/icons";
 import { Button, Input } from "@/app/components/ui";
 import { AuthShell } from "@/app/components/auth-shell";
 

@@ -3,7 +3,7 @@
 /* Admin moderation dashboard — Overview, Moderation, Users, Schools, Reports, Settings. */
 
 import { FormEvent, useEffect, useMemo, useState } from "react";
-import { Icon, IconName } from "@/app/components/icon";
+import { Icon, IconName } from "@/app/components/icons";
 import {
   Button, Card, Chip, Badge, Toggle, Input, Textarea, Empty, ImgPlaceholder, Field, Modal,
   CATEGORIES, categoryMeta, SectionHeader, Count,

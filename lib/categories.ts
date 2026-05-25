@@ -4,7 +4,7 @@
  * re-exports these for backward compatibility with existing imports.
  */
 
-import type { IconName } from "@/app/components/icon";
+import type { IconName } from "@/app/components/icons";
 
 export type CategoryTone = "neutral" | "coral" | "amber" | "sage" | "plum" | "teal" | "dark" | "ghost";
 
